@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --black: #111111;
+  --black-soft: #1c1c1c;
+  --gold: #c6a04a;
+  --gold-bright: #d9b65d;
+  --cream: #f6f0e6;
+  --beige: #ebe2d4;
+  --white: #ffffff;
+  --muted: #6b5e52;
+}
+
+@theme inline {
+  --color-black: var(--black);
+  --color-black-soft: var(--black-soft);
+  --color-gold: var(--gold);
+  --color-gold-bright: var(--gold-bright);
+  --color-cream: var(--cream);
+  --color-beige: var(--beige);
+  --color-white: var(--white);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--cream);
+    color: var(--black);
+    font-family: var(--font-body), "Segoe UI", sans-serif;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--gold) 40%, white);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display), Georgia, serif;
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.6s ease-out both;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
