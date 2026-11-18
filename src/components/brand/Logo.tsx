@@ -6,7 +6,7 @@ type LogoProps = {
   className?: string;
 };
 
-export function Logo({ className = "" }: LogoProps) {
+export function Logo({ light = false, className = "" }: LogoProps) {
   return (
     <Link
       href="/"
@@ -14,11 +14,11 @@ export function Logo({ className = "" }: LogoProps) {
       aria-label="Golden Prime home"
     >
       <Image
-        src="/golden-prime-logo.png"
+        src={light ? "/golden-prime-logo-light.png" : "/golden-prime-logo.png"}
         alt="Golden Prime"
-        width={220}
-        height={120}
-        className="h-11 w-auto object-contain sm:h-12"
+        width={240}
+        height={82}
+        className="h-10 w-auto object-contain sm:h-12"
         priority
       />
     </Link>
