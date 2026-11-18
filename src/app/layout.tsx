@@ -25,7 +25,8 @@ export const metadata: Metadata = {
   description:
     "Golden Prime — premium furniture for modern homes in Islamabad. Explore beds, sofas, dining and more.",
   icons: {
-    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+    icon: [{ url: "/icon.png", type: "image/png" }],
+    apple: [{ url: "/icon.png" }],
   },
 };
 

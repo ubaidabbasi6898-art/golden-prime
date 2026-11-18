@@ -1,5 +1,12 @@
 import Link from "next/link";
 import { Logo } from "@/components/brand/Logo";
+import {
+  BUSINESS_ADDRESS,
+  BUSINESS_EMAIL,
+  BUSINESS_NAME,
+  BUSINESS_PHONE,
+  BUSINESS_PHONE_TEL,
+} from "@/lib/contact";
 
 export function Footer() {
   return (
@@ -35,16 +42,16 @@ export function Footer() {
         <div>
           <h3 className="mb-3 font-display text-xl text-gold">Visit Us</h3>
           <p className="text-sm text-cream/75">
-            Golden Prime
+            {BUSINESS_NAME}
             <br />
-            Islamabad S7 Parkers
+            {BUSINESS_ADDRESS}
             <br />
-            <a href="tel:0300125789" className="hover:text-gold">
-              0300125789
+            <a href={BUSINESS_PHONE_TEL} className="hover:text-gold">
+              {BUSINESS_PHONE}
             </a>
             <br />
-            <a href="mailto:Lukman124@gmail.com" className="hover:text-gold">
-              Lukman124@gmail.com
+            <a href={`mailto:${BUSINESS_EMAIL}`} className="hover:text-gold">
+              {BUSINESS_EMAIL}
             </a>
           </p>
         </div>

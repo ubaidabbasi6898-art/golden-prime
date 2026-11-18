@@ -34,7 +34,7 @@ export function ContactForm() {
     if (Object.keys(next).length > 0) return;
 
     setSuccess(
-      "Thank you. Your inquiry has been recorded. We will contact you soon. (Demo form — no email was sent.)",
+      "Thank you. Your inquiry has been recorded. No email was sent automatically because an email service is not configured yet. You can also reach Golden Prime at shaniii777888@gmail.com.",
     );
     setForm({ name: "", email: "", phone: "", message: "" });
   }

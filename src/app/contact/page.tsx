@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/forms/ContactForm";
+import {
+  BUSINESS_ADDRESS,
+  BUSINESS_EMAIL,
+  BUSINESS_NAME,
+  BUSINESS_PHONE,
+  BUSINESS_PHONE_TEL,
+  BUSINESS_WHATSAPP_URL,
+} from "@/lib/contact";
 
 export const metadata: Metadata = {
   title: "Contact",
   description: "Contact Golden Prime in Islamabad for furniture enquiries.",
 };
-
-const WHATSAPP_URL = "https://wa.me/92300125789";
 
 export default function ContactPage() {
   return (
@@ -25,13 +31,13 @@ export default function ContactPage() {
           <dl className="mt-6 space-y-4 text-sm">
             <div>
               <dt className="uppercase tracking-wider text-muted">Business Name</dt>
-              <dd className="mt-1 text-base text-black">Golden Prime</dd>
+              <dd className="mt-1 text-base text-black">{BUSINESS_NAME}</dd>
             </div>
             <div>
               <dt className="uppercase tracking-wider text-muted">Phone Number</dt>
               <dd className="mt-1">
-                <a href="tel:0300125789" className="text-base text-black hover:text-gold">
-                  0300125789
+                <a href={BUSINESS_PHONE_TEL} className="text-base text-black hover:text-gold">
+                  {BUSINESS_PHONE}
                 </a>
               </dd>
             </div>
@@ -39,21 +45,21 @@ export default function ContactPage() {
               <dt className="uppercase tracking-wider text-muted">Email Address</dt>
               <dd className="mt-1">
                 <a
-                  href="mailto:Lukman124@gmail.com"
+                  href={`mailto:${BUSINESS_EMAIL}`}
                   className="text-base text-black hover:text-gold"
                 >
-                  Lukman124@gmail.com
+                  {BUSINESS_EMAIL}
                 </a>
               </dd>
             </div>
             <div>
               <dt className="uppercase tracking-wider text-muted">Business Address</dt>
-              <dd className="mt-1 text-base text-black">Islamabad S7 Parkers</dd>
+              <dd className="mt-1 text-base text-black">{BUSINESS_ADDRESS}</dd>
             </div>
           </dl>
 
           <a
-            href={WHATSAPP_URL}
+            href={BUSINESS_WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-8 inline-flex items-center gap-2 bg-[#25D366] px-5 py-3 text-xs uppercase tracking-[0.18em] text-black transition hover:brightness-95"
