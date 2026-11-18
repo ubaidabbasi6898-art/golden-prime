@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 type LogoProps = {
@@ -13,13 +12,15 @@ export function Logo({ light = false, className = "" }: LogoProps) {
       className={`inline-flex items-center ${className}`}
       aria-label="Golden Prime home"
     >
-      <Image
-        src={light ? "/golden-prime-logo-light.png" : "/golden-prime-logo.png"}
+      {/* SVG keeps the GP mark + GOLDEN/PRIME wordmark sharp at every size */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={light ? "/golden-prime-logo-light.svg" : "/golden-prime-logo.svg"}
         alt="Golden Prime"
         width={240}
-        height={82}
-        className="h-10 w-auto object-contain sm:h-12"
-        priority
+        height={65}
+        className="h-11 w-auto object-contain sm:h-14"
+        decoding="async"
       />
     </Link>
   );
