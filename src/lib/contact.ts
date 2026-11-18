@@ -3,4 +3,4 @@ export const BUSINESS_EMAIL = "shaniii777888@gmail.com";
 export const BUSINESS_PHONE = "03099029010";
 export const BUSINESS_PHONE_TEL = "tel:03099029010";
 export const BUSINESS_WHATSAPP_URL = "https://wa.me/923099029010";
-export const BUSINESS_ADDRESS = "Street 6B, Old Town, Phase 5";
+export const BUSINESS_ADDRESS = "Street 6B, Ghouri Town, Phase 5";
